@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class SwitchCaseDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Choose an option (1-5):");
+        System.out.println("1. Greet");
+        System.out.println("2. Add two numbers");
+        System.out.println("3. Check even or odd");
+        System.out.println("4. Multiply numbers");
+        System.out.println("5. Exit");
+
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.println("Hello, have a nice day!");
+                break;
+            case 2:
+                System.out.print("Enter two numbers: ");
+                int a = sc.nextInt();
+                int b = sc.nextInt();
+                System.out.println("Sum: " + (a + b));
+                break;
+            case 3:
+                System.out.print("Enter a number: ");
+                int num = sc.nextInt();
+                System.out.println(num + (num % 2 == 0 ? " is Even" : " is Odd"));
+                break;
+            case 4:
+                System.out.print("Enter two numbers: ");
+                int x = sc.nextInt();
+                int y = sc.nextInt();
+                System.out.println("Product: " + (x * y));
+                break;
+            case 5:
+                System.out.println("Exiting... Goodbye!");
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
+    }
+}
